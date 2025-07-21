@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Atari color palette */
+  --atari-gold: hsl(51, 100%, 50%);
+  --atari-red: hsl(0, 79%, 63%);
+  --atari-cyan: hsl(177, 92%, 70%);
+  --atari-blue: hsl(198, 93%, 60%);
+  --atari-green: hsl(160, 51%, 49%);
+  --atari-yellow: hsl(50, 100%, 80%);
+  --atari-purple: hsl(300, 47%, 75%);
+  --atari-dark: hsl(210, 22%, 49%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-retro {
+    font-family: 'Courier New', 'Monaco', monospace;
+  }
+  
+  .text-atari-gold {
+    color: var(--atari-gold);
+  }
+  
+  .text-atari-red {
+    color: var(--atari-red);
+  }
+  
+  .text-atari-cyan {
+    color: var(--atari-cyan);
+  }
+  
+  .text-atari-blue {
+    color: var(--atari-blue);
+  }
+  
+  .text-atari-green {
+    color: var(--atari-green);
+  }
+  
+  .text-atari-yellow {
+    color: var(--atari-yellow);
+  }
+  
+  .text-atari-purple {
+    color: var(--atari-purple);
+  }
+  
+  .bg-atari-gold {
+    background-color: var(--atari-gold);
+  }
+  
+  .bg-atari-red {
+    background-color: var(--atari-red);
+  }
+  
+  .bg-atari-cyan {
+    background-color: var(--atari-cyan);
+  }
+  
+  .bg-atari-blue {
+    background-color: var(--atari-blue);
+  }
+  
+  .bg-atari-green {
+    background-color: var(--atari-green);
+  }
+  
+  .bg-atari-yellow {
+    background-color: var(--atari-yellow);
+  }
+  
+  .bg-atari-purple {
+    background-color: var(--atari-purple);
+  }
+  
+  .bg-atari-dark {
+    background-color: var(--atari-dark);
+  }
+  
+  .border-atari-gold {
+    border-color: var(--atari-gold);
+  }
+  
+  .border-atari-red {
+    border-color: var(--atari-red);
+  }
+  
+  .border-atari-cyan {
+    border-color: var(--atari-cyan);
+  }
+  
+  .border-atari-blue {
+    border-color: var(--atari-blue);
+  }
+  
+  .border-atari-green {
+    border-color: var(--atari-green);
+  }
+  
+  .border-atari-yellow {
+    border-color: var(--atari-yellow);
+  }
+  
+  .border-atari-purple {
+    border-color: var(--atari-purple);
+  }
+  
+  .pixel-border {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+  
+  .retro-shadow {
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.8);
+  }
+  
+  .game-button {
+    transition: all 0.1s ease;
+  }
+  
+  .game-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+  }
+  
+  .enemy-blink {
+    animation: blink 0.5s infinite alternate;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.6; }
+  }
+  
+  .treasure-glow {
+    animation: glow 1s infinite alternate;
+  }
+  
+  @keyframes glow {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.3); }
+  }
+  
+  .key-bounce {
+    animation: bounce 0.8s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+  }
+}
